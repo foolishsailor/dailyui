@@ -1,0 +1,132 @@
+@import "./variables";
+@import "./base";
+@import "./layout";
+@import "./components";
+
+.card_payment__payment_detail > form {
+}
+
+.card_payment {
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--secondary-color);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 5px 5px rgba(0, 0, 0, 0.3);
+
+  @media (max-width: $mobile-breakpoint) {
+    flex-wrap: wrap-reverse;
+    border-radius: 0px;
+  }
+}
+
+.card_payment__checkout_progress {
+  width: 10%;
+  background: var(--secondary-color);
+}
+
+.card_payment__payment_detail {
+  flex: 1;
+  align-self: flex-end;
+  justify-self: flex-end;
+  padding: 3% 5%;
+  background-color: var(--secondary-color);
+
+  @media (max-width: $mobile-breakpoint) {
+    width: 100%;
+    padding: 30px;
+  }
+}
+
+.card_payment__product {
+  position: relative;
+  flex: 1;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "product-image product-description"
+    "product-receiver product-shipping"
+    "product-contact product-shipping";
+
+  padding: 3% 10%;
+  background-color: var(--primary-color);
+  background-image: radial-gradient(
+    circle at 10% 30%,
+    #b75658 0%,
+    var(--primary-color) 80%
+  );
+
+  @media (max-width: $mobile-breakpoint) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "product-image"
+      "product-description"
+      "product-receiver"
+      "product-contact"
+      "product-shipping";
+    grid-gap: 5px;
+    width: 100%;
+    padding: 30px;
+    background-image: radial-gradient(
+      circle at center top,
+      #b75658 0%,
+      var(--primary-color) 80%
+    );
+  }
+}
+
+.product__image {
+  grid-area: product-image;
+  position: absolute;
+  left: -17vw;
+  top: 50px;
+  width: 25vw;
+
+  @media (max-width: $mobile-breakpoint) {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 35vw;
+    margin-bottom: 20px;
+  }
+}
+
+.product__image:after {
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  left: 15%;
+  width: 70%;
+  height: 20px;
+  border-radius: 65% / 50%;
+  background: radial-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 80%);
+}
+
+.product__description {
+  grid-area: product-description;
+}
+
+.product__receiver {
+  grid-area: product-receiver;
+  color: #ccc;
+}
+
+.product__contact {
+  grid-area: product-contact;
+  color: #ccc;
+}
+
+.product__shipping {
+  grid-area: product-shipping;
+  color: #ccc;
+}
+
+.product__shipping_logo > img {
+  filter: brightness(1000%);
+
+  @media (max-width: $mobile-breakpoint) {
+    width: 40%;
+  }
+}

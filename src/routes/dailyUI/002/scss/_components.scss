@@ -1,0 +1,27 @@
+.form___inline {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  input {
+    width: 40%;
+  }
+
+  button {
+    width: 45%;
+    margin: 10px 0;
+  }
+}
+
+button {
+  .primary {
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+  }
+
+  .outline {
+    border: solid 1px var(--primary-color);
+    color: var(--primary-color);
+  }
+}

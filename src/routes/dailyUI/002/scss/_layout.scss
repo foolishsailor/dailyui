@@ -1,0 +1,27 @@
+@import "./variables";
+
+.wrapper {
+  display: flex;
+  min-height: 100%;
+  width: 100%;
+  padding: 5vw;
+  justify-content: center;
+  align-items: center;
+  background-color: #dddddd;
+
+  @media (max-width: $mobile-breakpoint) {
+    padding: 0;
+    align-items: stretch;
+  }
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: $mobile-breakpoint) {
+    align-items: stretch;
+  }
+}
