@@ -1,5 +1,7 @@
 # Another compendium of #DailyUI projects
 
+Live Demo of pages can be found here:  DailyUI
+
 I'm not a designer so I put these together to help refine my design skills and to develop a toolbox of efficient and repeatable solutions to the same problems that appear again and again in design.
 
 Notes:
