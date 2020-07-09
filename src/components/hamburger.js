@@ -28,23 +28,20 @@ const StyledDiv = styled.div`
 
 const StyledImg = styled.img`
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 13px;
+  left: 13px;
+  width: 24px;
+  height: 24px;
   transition: all 200ms;
 `;
 
 const HamburgerImg = styled(StyledImg)`
   ${({ isVisible }) =>
-    isVisible
-      ? "transform: translate(-50%, -50%) rotate(180deg); opacity:0"
-      : "opacity:1"};
+    isVisible ? "transform: rotate(180deg); opacity:0" : "opacity:1"};
 `;
 const CloseImg = styled(StyledImg)`
   ${({ isVisible }) =>
-    isVisible
-      ? "transform: translate(-50%, -50%) rotate(180deg); opacity:1"
-      : "opacity:0"};
+    isVisible ? "transform: rotate(180deg); opacity:1" : "opacity:0"};
 `;
 
 const Hamburger = ({ onClick, isVisible }) => {

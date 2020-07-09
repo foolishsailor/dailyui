@@ -1,17 +1,22 @@
 import { createGlobalStyle } from "styled-components";
 import { normalize } from "styled-normalize";
 import { defaultTheme } from "./defaultTheme";
+
+export const Base = createGlobalStyle`
+${normalize}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+`;
+
 export const Defaults = createGlobalStyle`
-  ${normalize}
-
-  html {
-    box-sizing: border-box;
-  }
-
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-
+  
   body {
     margin: 0;
     padding: 0;
