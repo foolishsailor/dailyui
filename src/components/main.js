@@ -16,9 +16,6 @@ const StyledMain = styled.main`
   width: 100%;
   height: 100%;
   box-shadow: -2px 0 2px rgba(0, 0, 0, 0.1), -4px 0 4px rgba(0, 0, 0, 0.2);
-  transform: ${({ isVisible }) =>
-    isVisible ? "translateX(250px)" : "translateX(0px)"};
-  transition: all 200ms ease-in-out;
 `;
 
 const Main = ({ children }) => {
@@ -31,9 +28,9 @@ const Main = ({ children }) => {
 
   return (
     <Wrapper>
-      <SideBar />
-      <Hamburger onClick={handleClick} />
-      <StyledMain isVisible={isVisible}>{children}</StyledMain>
+      <Hamburger isVisible={isVisible} onClick={handleClick} />
+      <StyledMain>{children}</StyledMain>
+      <SideBar onClick={handleClick} isVisible={isVisible} />
     </Wrapper>
   );
 };

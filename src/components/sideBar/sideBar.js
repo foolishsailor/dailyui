@@ -2,18 +2,22 @@ import React from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import projectsComplete from "../../utils/projectsComplete";
-import breakpoints from "../../utils/globalStyles/breakpoints";
 
 const StyledNav = styled.nav`
   font-family: "Roboto Mono";
-  position: absolute;
+  position: fixed;
+  left: -250px;
   height: 100vh;
   width: 250px;
-  padding: 10px;
+  padding: 30px;
   text-align: center;
+  color: white;
   background-color: #1a5e63;
   background: linear-gradient(180deg, #028090, #1a5e63);
-  color: white;
+  overflow-y: auto;
+  transform: ${({ isVisible }) =>
+    isVisible ? "translateX(250px)" : "translateX(0px)"};
+  transition: all 200ms ease-in-out;
 `;
 
 const StyledLi = styled.li`
@@ -28,7 +32,7 @@ const StyledLi = styled.li`
 const StyledSpan = styled.span`
   display: block;
   font-size: 1.6em;
-  margin: 2em auto;
+  margin: 3em 0 1em 0;
 `;
 
 const NavLinks = projectsComplete.map((item, i) => {
@@ -42,9 +46,9 @@ const NavLinks = projectsComplete.map((item, i) => {
   );
 });
 
-const SideBar = ({ isVisible }) => {
+const SideBar = ({ isVisible, onClick }) => {
   return (
-    <StyledNav>
+    <StyledNav onClick={onClick} isVisible={isVisible}>
       <StyledSpan>Daily UI Challenge</StyledSpan>
       {NavLinks}
     </StyledNav>

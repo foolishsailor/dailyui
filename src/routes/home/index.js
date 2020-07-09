@@ -55,13 +55,18 @@ const Home = () => {
             solutions to the same problems that appear again and again in
             design.
           </p>
-          <p>
-            These were built with React and Styled Components. Each page has a
-            fully custom theme including fonts.
-          </p>
+          <p>Notes:</p>
+          <ul>
+            <li>
+              These were built in functional style with React and Styled
+              Components
+            </li>
+            <li>All pages are fully responsive</li>
+            <li>Each page has a fully custom theme including fonts</li>
+          </ul>
           <p>
             Here is a nifty little hook I wrote to keep bloat down by stripping
-            out fonts before loading new ones
+            out fonts before loading new ones.
           </p>
         </MainContent>
       </Wrapper>

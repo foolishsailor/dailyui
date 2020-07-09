@@ -35,28 +35,26 @@ const StyledImg = styled.img`
 `;
 
 const HamburgerImg = styled(StyledImg)`
-  ${({ isOpen }) =>
-    isOpen
+  ${({ isVisible }) =>
+    isVisible
       ? "transform: translate(-50%, -50%) rotate(180deg); opacity:0"
       : "opacity:1"};
 `;
 const CloseImg = styled(StyledImg)`
-  ${({ isOpen }) =>
-    isOpen
+  ${({ isVisible }) =>
+    isVisible
       ? "transform: translate(-50%, -50%) rotate(180deg); opacity:1"
       : "opacity:0"};
 `;
 
-const Hamburger = ({ onClick }) => {
-  const [isOpen, setIsOpen] = useState(false);
+const Hamburger = ({ onClick, isVisible }) => {
   const handleClick = () => {
-    setIsOpen(!isOpen);
     onClick();
   };
   return (
     <StyledDiv onClick={handleClick}>
-      <HamburgerImg isOpen={isOpen} src={hamburger} alt='OpenMenu' />
-      <CloseImg isOpen={isOpen} src={cross} alt='OpenMenu' />
+      <HamburgerImg isVisible={isVisible} src={hamburger} alt='OpenMenu' />
+      <CloseImg isVisible={isVisible} src={cross} alt='OpenMenu' />
     </StyledDiv>
   );
 };

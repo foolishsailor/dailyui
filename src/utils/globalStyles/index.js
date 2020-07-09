@@ -64,6 +64,7 @@ export const Defaults = createGlobalStyle`
   li {
     padding-left: 0;
     list-style-type: none;
+    margin: 10px 0;
   }
 
   a {
