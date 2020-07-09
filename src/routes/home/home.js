@@ -18,19 +18,6 @@ const Home = () => {
               solutions to the same problems that appear again and again in
               design.
             </p>
-            <p>Notes:</p>
-            <ul>
-              <li>
-                These were built in functional style with React and Styled
-                Components
-              </li>
-              <li>All pages are fully responsive and interactive</li>
-              <li>Each page has a fully custom theme including fonts</li>
-            </ul>
-            <p>
-              Here is a nifty little hook I wrote to keep bloat down by
-              stripping out fonts before loading new ones.
-            </p>
           </Styles.MainContent>
         </Styles.InnerWrapper>
       </Styles.Wrapper>
