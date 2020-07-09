@@ -33,7 +33,7 @@ export const InnerWrapper = styled(motion.div)`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
+
   width: 100%;
   border: none;
   border-radius: 0;

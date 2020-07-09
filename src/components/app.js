@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch } from "react-router-dom";
 import RouteWithTitle from "./routeWithTitle";
 import Home from "../routes/home";
 import Main from "./main";
-import { Base } from "../utils/globalStyles";
+import { BaseStyle } from "../utils/globalStyles";
 import projectsComplete from "../utils/projectsComplete";
 
 const renderLoader = () => <p>Loading</p>;
@@ -32,7 +32,7 @@ const Routes = projectsComplete.map((item, i) => {
 const App = () => {
   return (
     <Router>
-      <Base />
+      <BaseStyle />
       <Main>
         <Switch>
           <RouteWithTitle

@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 import { normalize } from "styled-normalize";
 import { defaultTheme } from "./defaultTheme";
 
-export const Base = createGlobalStyle`
+export const BaseStyle = createGlobalStyle`
 ${normalize}
 
 html {
