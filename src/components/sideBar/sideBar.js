@@ -51,6 +51,7 @@ const SideBar = ({ isVisible, onClick }) => {
     <StyledNav onClick={onClick} isVisible={isVisible}>
       <StyledSpan>Daily UI Challenge</StyledSpan>
       {NavLinks}
+      <p>More Coming..</p>
     </StyledNav>
   );
 };
