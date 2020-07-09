@@ -6,7 +6,7 @@ import breakpoints from "../../utils/globalStyles/breakpoints";
 
 const StyledNav = styled.nav`
   font-family: "Roboto Mono";
-  position: relative;
+  position: absolute;
   height: 100vh;
   width: 250px;
   padding: 10px;
@@ -14,10 +14,6 @@ const StyledNav = styled.nav`
   background-color: #1a5e63;
   background: linear-gradient(180deg, #028090, #1a5e63);
   color: white;
-
-  @media ${breakpoints.tabletLandscape} {
-    position: absolute;
-  }
 `;
 
 const StyledLi = styled.li`
@@ -29,8 +25,10 @@ const StyledLi = styled.li`
   }
 `;
 
-const StyledH3 = styled.h3`
-  margin-top: 1rem;
+const StyledSpan = styled.span`
+  display: block;
+  font-size: 1.6em;
+  margin: 2em auto;
 `;
 
 const NavLinks = projectsComplete.map((item, i) => {
@@ -47,7 +45,7 @@ const NavLinks = projectsComplete.map((item, i) => {
 const SideBar = ({ isVisible }) => {
   return (
     <StyledNav>
-      <StyledH3>Daily UI Challenge</StyledH3>
+      <StyledSpan>Daily UI Challenge</StyledSpan>
       {NavLinks}
     </StyledNav>
   );

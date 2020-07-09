@@ -1,51 +1,37 @@
-:root {
-  --primary-color: #750002;
-  --secondary-color: #eee;
-}
+@import "./variables";
 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100%;
-  font-family: "Raleway";
-  font-weight: 400;
-  font-size: 16px;
-}
-
-button {
+.button {
   margin: 10px;
   padding: 15px;
-  font-family: "Raleway";
   font-size: 1rem;
   font-weight: 700;
   border-radius: 100px;
   border: none;
 
   &.primary {
-    color: var(--secondary-color);
-    background-color: var(--primary-color);
+    color: $secondary-color;
+    background-color: $primary-color;
   }
 
   &.outline {
-    border: solid 1px var(--primary-color);
-    color: var(--primary-color);
+    border: solid 1px $primary-color;
+    color: $primary-color;
   }
 }
 
-form {
+.form {
   display: flex;
   flex-direction: column;
 }
 
-label {
-  color: var(--primary-color);
+.label {
+  color: $primary-color;
   font-weight: 700;
   font-size: 0.8rem;
   margin-top: 10px;
 }
 
-input {
+.input {
   padding: 10px;
   margin: 10px;
   border: none;
@@ -55,21 +41,17 @@ input {
   font-size: 1.2rem;
 }
 
-h2 {
-  font-size: 2rem;
-}
-
 h2.price {
   margin-bottom: 0.8rem;
 }
 
 p.header {
   font-weight: 700;
-  color: var(--secondary-color);
+  color: $secondary-color;
   margin-bottom: 5px;
 }
 
 .text___muted {
   font-size: 0.8rem;
-  color: var(--secondary-color);
+  color: $secondary-color;
 }

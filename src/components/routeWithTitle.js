@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 
 const RouteWithTitle = ({ title, ...rest }) => {
   useEffect(() => {
-    console.log("title", title);
     document.title = title;
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [title]);

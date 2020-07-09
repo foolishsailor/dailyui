@@ -2,6 +2,7 @@ import React, { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Switch } from "react-router-dom";
 import RouteWithTitle from "./routeWithTitle";
 import { Defaults } from "../utils/globalStyles";
+import Home from "../routes/home";
 import Main from "./main";
 import projectsComplete from "../utils/projectsComplete";
 
@@ -31,9 +32,16 @@ const Routes = projectsComplete.map((item, i) => {
 const App = () => {
   return (
     <Router>
-      <Defaults />
       <Main>
-        <Switch>{Routes}</Switch>
+        <Switch>
+          <RouteWithTitle
+            exact
+            component={Home}
+            path='/'
+            title='Daily UI projects'
+          />
+          {Routes}
+        </Switch>
       </Main>
     </Router>
   );

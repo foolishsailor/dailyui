@@ -10,7 +10,7 @@
   display: flex;
   border-radius: 20px;
   overflow: hidden;
-  background: var(--secondary-color);
+  background: $secondary-color;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 5px 5px rgba(0, 0, 0, 0.3);
 
   @media (max-width: $mobile-breakpoint) {
@@ -21,7 +21,7 @@
 
 .card_payment__checkout_progress {
   width: 10%;
-  background: var(--secondary-color);
+  background: $secondary-color;
 }
 
 .card_payment__payment_detail {
@@ -29,7 +29,7 @@
   align-self: flex-end;
   justify-self: flex-end;
   padding: 3% 5%;
-  background-color: var(--secondary-color);
+  background-color: $secondary-color;
 
   @media (max-width: $mobile-breakpoint) {
     width: 100%;
@@ -50,11 +50,11 @@
     "product-contact product-shipping";
 
   padding: 3% 10%;
-  background-color: var(--primary-color);
+  background-color: $primary-color;
   background-image: radial-gradient(
     circle at 10% 30%,
     #b75658 0%,
-    var(--primary-color) 80%
+    $primary-color 80%
   );
 
   @media (max-width: $mobile-breakpoint) {
@@ -72,7 +72,7 @@
     background-image: radial-gradient(
       circle at center top,
       #b75658 0%,
-      var(--primary-color) 80%
+      $primary-color 80%
     );
   }
 }
