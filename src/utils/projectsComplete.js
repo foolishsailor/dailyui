@@ -1,3 +1,7 @@
-const projectsComplete = ["001", "002", "003"];
+const projectsComplete = [
+  { day: "001", description: "", status: "Complete" },
+  { day: "002", description: "", status: "Complete" },
+  { day: "003", description: "", status: "Layout" },
+];
 
 export default projectsComplete;

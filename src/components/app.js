@@ -1,7 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Switch } from "react-router-dom";
 import RouteWithTitle from "./routeWithTitle";
-import { Defaults } from "../utils/globalStyles";
 import Home from "../routes/home";
 import Main from "./main";
 import projectsComplete from "../utils/projectsComplete";
@@ -10,7 +9,7 @@ const renderLoader = () => <p>Loading</p>;
 
 const Routes = projectsComplete.map((item, i) => {
   const Component = () => {
-    const LazyComponent = lazy(() => import(`../routes/dailyUI/${item}`));
+    const LazyComponent = lazy(() => import(`../routes/dailyUI/${item.day}`));
     return (
       <Suspense fallback={renderLoader()}>
         <LazyComponent />
@@ -23,8 +22,8 @@ const Routes = projectsComplete.map((item, i) => {
       key={i}
       exact
       component={Component}
-      path={`/dailyUI/${item}`}
-      title={`Daily UI #${item}`}
+      path={`/dailyUI/${item.day}`}
+      title={`Daily UI #${item.day}`}
     />
   );
 });

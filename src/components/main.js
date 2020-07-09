@@ -15,7 +15,6 @@ const StyledMain = styled.main`
   background-color: #091f20;
   width: 100%;
   height: 100%;
-  box-shadow: -2px 0 2px rgba(0, 0, 0, 0.1), -4px 0 4px rgba(0, 0, 0, 0.2);
 `;
 
 const Main = ({ children }) => {
