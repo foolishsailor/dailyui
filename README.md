@@ -6,7 +6,7 @@ I'm not a designer so I put these together to help refine my design skills and t
 
 Notes:
 
-These were built in functional style with React and Styled Components
-All pages are fully responsive
-Each page has a fully custom theme including fonts
-Here is a nifty little hook I wrote to keep bloat down by stripping out fonts before loading new ones.
+* These were built in functional style with React and Styled Components
+* All pages are fully responsive and interactive
+* Each page has a fully custom theme including fonts
+* Here is a nifty little hook I wrote to keep bloat down by stripping out fonts before loading new ones.
