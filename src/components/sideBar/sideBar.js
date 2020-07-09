@@ -58,7 +58,7 @@ const NavLinks = projectsComplete.map((item, i) => {
 const SideBar = ({ isVisible, onClick }) => {
   return (
     <StyledNav onClick={onClick} isVisible={isVisible}>
-      <StyledSpan as={NavLink} exdact to='/'>
+      <StyledSpan as={NavLink} exact to='/'>
         Daily UI Challenge
       </StyledSpan>
       {NavLinks}

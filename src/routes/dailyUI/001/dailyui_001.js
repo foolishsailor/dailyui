@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Defaults } from "../../../utils/globalStyles";
 import { ThemeProvider } from "styled-components";
 import * as Elements from "./styles/dailyUI001_styles";
+import InputGroup from "./components/inputGroup";
 import daily001Theme from "./styles/dailyUI001_theme";
 
 import useLoadFont from "../../../hooks/useLoadFont";
@@ -69,6 +70,8 @@ const containerAnimation = {
   },
 };
 
+const emailTest = /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+
 const DailyUI_001 = () => {
   useLoadFont(["Economica:400,700"]);
   const [animateState, setAnimationState] = useState(null);
@@ -111,9 +114,24 @@ const DailyUI_001 = () => {
           </Elements.IntroContainer>
 
           <Elements.SignUpForm initial={itemInitial} variants={formAnimation}>
-            <Elements.StyledInput placeholder='Username' />
-            <Elements.StyledInput placeholder='Email' />
-            <Elements.StyledInput placeholder='Password' />
+            <InputGroup
+              name='name'
+              placeholder='Username'
+              errorMessage='Name required'
+              validation={(value) => value.length > 0}
+            />
+            <InputGroup
+              name='email'
+              placeholder='Email'
+              errorMessage='Please enter a valid email address'
+              validation={(value) => value.match(emailTest)}
+            />
+            <InputGroup
+              name='password'
+              placeholder='Password'
+              errorMessage='Password longer than 6 characters required'
+              validation={(value) => value.length > 6}
+            />
             <Elements.PrimaryButton>Sign Up</Elements.PrimaryButton>
             <Elements.TextButton>Sign In</Elements.TextButton>
           </Elements.SignUpForm>

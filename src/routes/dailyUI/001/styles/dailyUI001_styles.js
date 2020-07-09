@@ -33,14 +33,10 @@ export const InnerWrapper = styled(motion.div)`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  width: 100%;
-  border: none;
-  border-radius: 0;
   overflow: hidden;
-
   border-radius: 0;
   border: none;
+  width: 100%;
 
   @media ${breakpoints.mobileLandscape} {
     flex-direction: row;
@@ -48,6 +44,11 @@ export const InnerWrapper = styled(motion.div)`
 
   @media ${breakpoints.tabletPortrait} {
     flex-direction: column;
+    width: unset;
+    height: unset;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid white;
   }
 `;
 
@@ -102,14 +103,6 @@ export const SignUpForm = styled(motion.form)`
   padding: 20px 20px;
   border-radius: 20px;
   opacity: 1;
-`;
-
-export const StyledInput = styled.input`
-  font-size: 1.4em;
-  padding: 10px 20px;
-  margin: 10px 0;
-  background: rgba(255, 255, 255, 0.7);
-  border: none;
 `;
 
 export const Button = styled.button`
