@@ -37,16 +37,16 @@ export const InnerWrapper = styled(motion.div)`
   border-radius: 0;
   border: none;
   width: 100%;
+  height: 100%;
+  max-height: 800px;
+  max-width: 400px;
 
   @media ${breakpoints.mobileLandscape} {
     flex-direction: row;
   }
 
-  @media ${breakpoints.tabletPortrait} {
+  @media (min-width: 400px) and (min-height: 800px) {
     flex-direction: column;
-    width: unset;
-    height: unset;
-    padding: 20px;
     border-radius: 20px;
     border: 1px solid white;
   }
